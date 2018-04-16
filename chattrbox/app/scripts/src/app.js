@@ -1,6 +1,17 @@
+import socket from "./ws-client";
+
 class ChatApp {
   constructor() {
-    console.log("Hellow ES6!");
+    socket.init("ws://localhost:3001");
+    socket.registerOpenHandler(() => {
+      let message = new ChatMessage({
+        message: "pow!"
+      });
+      socket.sendMessage(message.serialize());
+      socket.registerMessageHandler((data) => {
+        console.log(data);
+      });
+    });
   }
 }
 
