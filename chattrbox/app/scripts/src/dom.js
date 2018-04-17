@@ -82,7 +82,7 @@ export class ChatList {
     this.timer = setInterval(() => {
       $("[data-time]").each((idx, element) => {
         let $element = $(element);
-        let timestamp = new Date().setTime($element.attr("date-time"));
+        let timestamp = new Date().setTime($element.attr("data-time"));
         let ago = moment(timestamp).fromNow();
         $element.html(ago);
       });
