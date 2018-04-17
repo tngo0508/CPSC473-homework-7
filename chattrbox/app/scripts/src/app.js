@@ -6,7 +6,7 @@ import {
   ChatForm,
   ChatList,
   promptForUsername
-} from "./dom1";
+} from "./dom";
 
 const FORM_SELECTOR = "[data-chat='chat-form']";
 const INPUT_SELECTOR = "[data-chat='message-input']";
