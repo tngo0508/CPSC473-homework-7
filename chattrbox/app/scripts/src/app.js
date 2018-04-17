@@ -32,6 +32,7 @@ class ChatApp {
         });
         socket.sendMessage(message.serialize());
       });
+      this.chatList.init();
     });
     socket.registerMessageHandler((data) => {
       console.log(data);

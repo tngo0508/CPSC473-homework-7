@@ -16,9 +16,9 @@ ws.on("connection", function(socket) {
     socket.send(currentTopic);
   }
 
-  messages.forEach(function(msg) {
-    socket.send(msg);
-  });
+  // messages.forEach(function(msg) {
+  //   socket.send(msg);
+  // });
 
   socket.on("message", function(data) {
     console.log("message received: " + data);
